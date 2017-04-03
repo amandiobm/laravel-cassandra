@@ -39,13 +39,13 @@ composer require sonvq/cassandra
 Add Cassandra service provider in `config/app.php`:
 
 ```php
-sonvq\Cassandra\CassandraServiceProvider::class,
+AmandioMagalhaes\Cassandra\CassandraServiceProvider::class,
 ```
 
 For usage with [Lumen](http://lumen.laravel.com), add the service provider in `bootstrap/app.php`. In this file, you will also need to enable Eloquent. You must however ensure that your call to `$app->withEloquent();` is **below** where you have registered the `CassandraServiceProvider`:
 
 ```php
-$app->register('sonvq\Cassandra\CassandraServiceProvider');
+$app->register('AmandioMagalhaes\Cassandra\CassandraServiceProvider');
 
 $app->withEloquent();
 ```
@@ -136,7 +136,7 @@ Everything else (should) work just like the original Eloquent model. Read more a
 You may also register an alias for the Cassandra model by adding the following to the alias array in `app/config/app.php`:
 
 ```php
-'Moloquent'       => 'sonvq\Cassandra\Eloquent\Model',
+'Moloquent'       => 'AmandioMagalhaes\Cassandra\Eloquent\Model',
 ```
 
 This will allow you to use the registered alias like:
@@ -197,7 +197,7 @@ Extensions
 If you want to use Laravel's native Auth functionality, register this included service provider:
 
 ```php
-'sonvq\Cassandra\Auth\PasswordResetServiceProvider',
+'AmandioMagalhaes\Cassandra\Auth\PasswordResetServiceProvider',
 ```
 
 This service provider will slightly modify the internal DatabaseReminderRepository to add support for Cassandra based password reminders. If you don't use password reminders, you don't have to register this service provider and everything else should work just fine.
@@ -708,7 +708,7 @@ $book->author()->save($newAuthor);
 
 ### MySQL Relations
 
-If you're using a hybrid Cassandra and SQL setup, you're in luck! The model will automatically return a Cassandra- or SQL-relation based on the type of the related model. Of course, if you want this functionality to work both ways, your SQL-models will need use the `sonvq\Cassandra\Eloquent\HybridRelations` trait. Note that this functionality only works for hasOne, hasMany and belongsTo relations.
+If you're using a hybrid Cassandra and SQL setup, you're in luck! The model will automatically return a Cassandra- or SQL-relation based on the type of the related model. Of course, if you want this functionality to work both ways, your SQL-models will need use the `AmandioMagalhaes\Cassandra\Eloquent\HybridRelations` trait. Note that this functionality only works for hasOne, hasMany and belongsTo relations.
 
 Example SQL-based User model:
 

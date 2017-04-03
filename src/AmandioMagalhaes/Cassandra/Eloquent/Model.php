@@ -79,7 +79,7 @@ abstract class Model extends BaseModel
      * @param  string  $localKey
      * @param  string  $foreignKey
      * @param  string  $relation
-     * @return \sonvq\Cassandra\Relations\EmbedsMany
+     * @return \AmandioMagalhaes\Cassandra\Relations\EmbedsMany
      */
     protected function embedsMany($related, $localKey = null, $foreignKey = null, $relation = null)
     {
@@ -114,7 +114,7 @@ abstract class Model extends BaseModel
      * @param  string  $localKey
      * @param  string  $foreignKey
      * @param  string  $relation
-     * @return \sonvq\Cassandra\Relations\EmbedsOne
+     * @return \AmandioMagalhaes\Cassandra\Relations\EmbedsOne
      */
     protected function embedsOne($related, $localKey = null, $foreignKey = null, $relation = null)
     {
@@ -505,8 +505,8 @@ abstract class Model extends BaseModel
     /**
      * Create a new Eloquent query builder for the model.
      *
-     * @param  \sonvq\Cassandra\Query\Builder $query
-     * @return \sonvq\Cassandra\Eloquent\Builder|static
+     * @param  \AmandioMagalhaes\Cassandra\Query\Builder $query
+     * @return \AmandioMagalhaes\Cassandra\Eloquent\Builder|static
      */
     public function newEloquentBuilder($query)
     {

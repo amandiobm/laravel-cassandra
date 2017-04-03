@@ -24,7 +24,7 @@ trait HybridRelations
     public function hasOne($related, $foreignKey = null, $localKey = null)
     {
         // Check if it is a relation with an original model.
-        if (! is_subclass_of($related, 'sonvq\Cassandra\Eloquent\Model')) {
+        if (! is_subclass_of($related, 'AmandioMagalhaes\Cassandra\Eloquent\Model')) {
             return parent::hasOne($related, $foreignKey, $localKey);
         }
 
@@ -50,7 +50,7 @@ trait HybridRelations
     public function morphOne($related, $name, $type = null, $id = null, $localKey = null)
     {
         // Check if it is a relation with an original model.
-        if (! is_subclass_of($related, 'sonvq\Cassandra\Eloquent\Model')) {
+        if (! is_subclass_of($related, 'AmandioMagalhaes\Cassandra\Eloquent\Model')) {
             return parent::morphOne($related, $name, $type, $id, $localKey);
         }
 
@@ -76,7 +76,7 @@ trait HybridRelations
     public function hasMany($related, $foreignKey = null, $localKey = null)
     {
         // Check if it is a relation with an original model.
-        if (! is_subclass_of($related, 'sonvq\Cassandra\Eloquent\Model')) {
+        if (! is_subclass_of($related, 'AmandioMagalhaes\Cassandra\Eloquent\Model')) {
             return parent::hasMany($related, $foreignKey, $localKey);
         }
 
@@ -102,7 +102,7 @@ trait HybridRelations
     public function morphMany($related, $name, $type = null, $id = null, $localKey = null)
     {
         // Check if it is a relation with an original model.
-        if (! is_subclass_of($related, 'sonvq\Cassandra\Eloquent\Model')) {
+        if (! is_subclass_of($related, 'AmandioMagalhaes\Cassandra\Eloquent\Model')) {
             return parent::morphMany($related, $name, $type, $id, $localKey);
         }
 
@@ -141,7 +141,7 @@ trait HybridRelations
         }
 
         // Check if it is a relation with an original model.
-        if (! is_subclass_of($related, 'sonvq\Cassandra\Eloquent\Model')) {
+        if (! is_subclass_of($related, 'AmandioMagalhaes\Cassandra\Eloquent\Model')) {
             return parent::belongsTo($related, $foreignKey, $otherKey, $relation);
         }
 
@@ -236,7 +236,7 @@ trait HybridRelations
         }
 
         // Check if it is a relation with an original model.
-        if (! is_subclass_of($related, 'sonvq\Cassandra\Eloquent\Model')) {
+        if (! is_subclass_of($related, 'AmandioMagalhaes\Cassandra\Eloquent\Model')) {
             return parent::belongsToMany($related, $collection, $foreignKey, $otherKey, $relation);
         }
 
