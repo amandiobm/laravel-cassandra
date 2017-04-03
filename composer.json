@@ -1,35 +1,40 @@
 {
-    "name": "sonvq/cassandra",
-    "description": "Cassandra Eloquent model and Query builder for Laravel",
-    "keywords": ["laravel","eloquent","cassandra","database","model"],
-    "homepage": "https://github.com/sonvq-qsoftvn/laravel-cassandra",
-    "authors": [
-        {
-            "name": "Quang Son Pro",
-            "homepage": "https://byant.co.uk"
-        }
-    ],
-    "license" : "MIT",
-    "require": {
-        "illuminate/support": "5.2.*",
-        "illuminate/container": "5.2.*",
-        "illuminate/database": "5.2.*",
-        "illuminate/events": "5.2.*"
-    },
-    "require-dev": {
-
-    },
-    "autoload": {
-        "psr-0": {
-            "sonvq\\Cassandra": "src/",
-            "sonvq\\Eloquent": "src/"
-        }
-    },
-    "autoload-dev": {
-        "classmap": [
-            "tests/TestCase.php",
-            "tests/models",
-            "tests/seeds"
-        ]
+  "name": "amandiobm/laravel-cassandra",
+  "description": "Cassandra Eloquent model and Query builder for Laravel",
+  "keywords": [
+    "laravel",
+    "eloquent",
+    "cassandra",
+    "database",
+    "model"
+  ],
+  "homepage": "https://github.com/amandiobm/laravel-cassandra",
+  "authors": [
+    {
+      "name": "Amandio Magalhaes",
+      "email": "amandio.magalhaes@gmail.com",
+      "homepage": "https://github.com/amandiobm"
     }
+  ],
+  "license": "MIT",
+  "require": {
+    "illuminate/support": "^5.1",
+    "illuminate/container": "^5.1",
+    "illuminate/database": "^5.1",
+    "illuminate/events": "^5.1",
+    "datastax/php-driver": "^1.2"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-0": {
+      "AmandioMagalhaes\\Cassandra": "src/",
+      "AmandioMagalhaes\\Eloquent": "src/"
+    }
+  },
+  "autoload-dev": {
+    "classmap": [
+    ]
+  },
+  "minimum-stability": "dev"
 }
